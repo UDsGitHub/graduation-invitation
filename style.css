@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  padding: 4rem 1rem;
+  font-family: "Open Sans", sans-serif;
+  background: #fefefa !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main > div {
+  background: white;
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+#main-content{
+    display: flex;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #24857f;
+  color: #c8ac64;
+}
+
+.subtitle {
+  color: #b3b3b3;
+}
+
+.image-content img {
+  object-fit: cover;
+  height: 100%;
+}
+
+form {
+  width: 65%;
+  gap: 1rem;
+}
+
+form label p {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #236673;
+  color: #c8ac64;
+}
+
+form label .input-wrapper {
+  position: relative;
+}
+
+form label span {
+  position: absolute;
+  padding-right: 1rem;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+
+form input {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  border: 1px solid #51a37a;
+  border: 1px solid #c8ac64;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+form input::placeholder,
+form label span {
+  color: #51a37a91;
+  color: #c8ac6486;
+}
+
+.submit-btn {
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: 0;
+  background: #dece67;
+  background: #c8ac64;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  transform: scaleY(1.05);
+}
+
+.submit-btn:active {
+  transform: scale(0.995);
+}
+
+@keyframes tilt-n-move-shaking {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(5px, 5px) rotate(5deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-5px, 5px) rotate(-5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+#thankyou{
+    display: none;
+    text-align: center;
+    animation: tilt-n-move-shaking 0.25s linear 40;
+}
+
+#thankyou h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 576px){
+    form {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+  form input {
+    padding: 0.5rem;
+  }
+}

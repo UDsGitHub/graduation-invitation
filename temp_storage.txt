@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="./intl-tel-input-17.0.19/build/css/intlTelInput.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <title>Chimmy's Graduation Invite</title>
+  </head>
+  <body class="flex items-center justify-center">
+    <main
+      class="flex flex-col md:flex-row justify-center items-center rounded-2xl shadow-2xl"
+    >
+      <div>
+        <img src="./images/graduation-image.png" alt="graduation ceremony" />
+      </div>
+      <div class="form p-4 text-center">
+        <h1 class="text-4xl font-bold">You are invited!</h1>
+        <p>Let us know if you can make it</p>
+        <form class="flex flex-col gap-6" action="">
+          <input type="text" id="name" placeholder="Name" />
+          <input type="email" id="email" placeholder="Email" />
+          <input type="tel" name="" id="phone" />
+          <button type="submit" class="submit-btn text-white p-4 rounded-xl font-semibold">I'm Coming</button>
+        </form>
+      </div>
+    </main>
+    <script src="./intl-tel-input-17.0.19/build/js/intlTelInput.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js" integrity="sha512-+gShyB8GWoOiXNwOlBaYXdLTiZt10Iy6xjACGadpqMs20aJOoh+PJt3bwUVA6Cefe7yF7vblX6QwyXZiVwTWGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+
+
+// var duration = 15 * 1000;
+// var animationEnd = Date.now() + duration;
+// var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+// function randomInRange(min, max) {
+//   return Math.random() * (max - min) + min;
+// }
+
+// var interval = setInterval(function () {
+//   var timeLeft = animationEnd - Date.now();
+
+//   if (timeLeft <= 0) {
+//     return clearInterval(interval);
+//   }
+
+//   var particleCount = 50 * (timeLeft / duration);
+//   // since particles fall down, start a bit higher than random
+//   confetti(
+//     Object.assign({}, defaults, {
+//       particleCount,
+//       origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+//     })
+//   );
+//   confetti(
+//     Object.assign({}, defaults, {
+//       particleCount,
+//       origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+//     })
+//   );
+// }, 250);
+
