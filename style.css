@@ -41,7 +41,7 @@ main > div {
 
 .image-content img {
   object-fit: cover;
-  height: 100%;
+  /* height: 100%; */
 }
 
 form {
@@ -120,6 +120,12 @@ form label span {
 #thankyou h1{
     font-size: 4rem;
     font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+    .image-content img{
+        height: 100%;
+    }
 }
 
 @media screen and (max-width: 576px){
