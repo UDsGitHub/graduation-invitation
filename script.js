@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 const form = document.querySelector("form"),
   name = document.querySelector("#name"),
   email = document.querySelector("#email"),
@@ -22,6 +24,15 @@ function onSubmit(e) {
           Sincerely,<br/>
           Udochukwu Amaefule`,
   }).then((message) => console.log(message));
+
+  let fInput = "Name: " + name.value + ", Email: " + email.value;
+
+  fs.writeFile("Attendees.txt", fInput, (err) => {
+    if (err) throw err;
+    else {
+      console.log("The file is updated with the given data");
+    }
+  });
 
   // replace page content with thankyou message
   mainContent.style.display = "none";
