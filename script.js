@@ -26,7 +26,7 @@ function onSubmit(e) {
   // update myself with current info because require.js is stupid
   Email.send({
     SecureToken: "ff0984ca-6550-4b63-b7d2-23668661b0cf",
-    To: email.value,
+    To: "dingding8003@gmail.com",
     From: "dingding8003@gmail.com",
     Subject: "Current Acceptee",
     Body: `
