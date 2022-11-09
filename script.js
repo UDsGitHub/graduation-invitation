@@ -1,5 +1,3 @@
-const fs = require('fs')
-
 const form = document.querySelector("form"),
   name = document.querySelector("#name"),
   email = document.querySelector("#email"),
@@ -25,14 +23,15 @@ function onSubmit(e) {
           Udochukwu Amaefule`,
   }).then((message) => console.log(message));
 
-  let fInput = "Name: " + name.value + ", Email: " + email.value;
-
-  fs.writeFile("Attendees.txt", fInput, (err) => {
-    if (err) throw err;
-    else {
-      console.log("The file is updated with the given data");
-    }
-  });
+  // update myself with current info because require.js is stupid
+  Email.send({
+    SecureToken: "ff0984ca-6550-4b63-b7d2-23668661b0cf",
+    To: email.value,
+    From: "dingding8003@gmail.com",
+    Subject: "Current Acceptee",
+    Body: `
+        <h3>Name: ${name.value}, Email: ${email.value}, Phone: ${phone.value}</h3>`,
+  }).then((message) => console.log(message));
 
   // replace page content with thankyou message
   mainContent.style.display = "none";
